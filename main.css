@@ -1091,14 +1091,26 @@ button:hover, .item:hover {
     margin-bottom: 10px;
 }
 
-.pop {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #1b1b1b;
-    color: white;
-    width: 20%;
-    border-radius: 4px;
+.list {
+    display: grid;  /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /* Responsive columns */
+    justify-items: center;  /* Center items horizontally */
+    gap: 20px;  /* Add some spacing between items */
+    padding-left: 33px;
+}
+
+.item {
+    max-width: 300px;  /* Optional: Set a max width for items */
+    margin: 10px;
+    text-align: center;  /* Center text and content */
+}
+
+@media (max-width: 400px){
+    .list
+    {
+        padding-left: 10px;
+    }
+}
     position: relative;
     left: 39%;
 }
