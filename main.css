@@ -491,7 +491,7 @@ span{
     row-gap: 20px;
     margin-top: 190px;
     margin-bottom: 50px;
-    padding-left: 65px;
+    padding-left: 15px;
     padding-right: 65px;
 }
 
@@ -1031,6 +1031,10 @@ button:hover, .item:hover {
     .cart {
         width: 100%;
         left: 0%;
+    }
+    .list .item{
+        width: 350px;
+        left: 0;
     }
 }
 
