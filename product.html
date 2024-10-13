@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo"><img src="img/logo-transparent.png" alt=""></a>
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+            </ul>
+        </header>
+
+        <div class="product-details"></div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+
+        const products = [
+            {id: 1, name: "Black Rice", image: 'img/products/black rice.png', price: 1200},
+            {id: 2, name: "Idly Podi", image: 'img/products/idly podi.png', price: 1200},
+            {id: 3, name: "Millet Dosa mix", image: 'img/products/millet dosa mix.png', price: 1200},
+            {id: 4, name: "Multi Millet Magic mix", image: 'img/products/multi millet magic mix.png', price: 1200},
+            {id: 5, name: "Parupu Podi", image: 'img/products/parupu podi.png', price: 1200},
+            {id: 6, name: "Sprouted Mix", image: 'img/products/sprouted mix.png', price: 1200}
+        ];
+
+        const product = products.find(p => p.id == productId);
+
+        if (product) {
+            document.querySelector('.product-details').innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h1>${product.name}</h1>
+                <p>Price: ₹${product.price}</p>
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            `;
+        }
+
+        function addToCart(id) {
+            // Add to cart logic here
+            alert('Added to cart');
+        }
+    </script>
+</body>
+</html>

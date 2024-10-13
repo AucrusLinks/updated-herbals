@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo"><img src="img/logo-transparent.png" alt=""></a>
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Mail</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#"><i class="ri-search-line"></i></a>
+                <a href="#"><i class="ri-user-line"></i></a>
+                <a href="#"><i class="ri-shopping-cart-line"></i></a>
+                <div class=" ri-menu-line" id="menu-icon" onclick="toggle()"></div>
+                <div class="shoping">
+                    <img src="img/bag.png" alt="">
+                    <span class="quantity">0</span>
+                </div>
+            </div>
+        </header>
+        <div class="pop">Added to cart <i class='bx bx-check' style="color: greenyellow;"></i></div>
+
+        <div class="list"></div>
+        
+    </div>
+
+    <div class="cart">
+        <h1>Cart</h1>
+        <ul class="listcart"></ul>
+        <div class="checkout">
+            <div class="total" onclick="wb()" style="cursor: pointer;">0</div>
+            <div class="closeshopping">Close</div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
