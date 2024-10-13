@@ -606,13 +606,15 @@ span{
 .listcart button {
     width: 35px;
     background-color: #fff5;
-    margin-left: 4px;
-    margin-right: 4px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
     border: none;
-    border-radius: 3px;
+    border-radius: 50%;
     color: #fff;
     cursor: pointer;
-}                          
+}  
 
 header {
     transition: background-color 0.3s ease, padding 0.3s ease;
