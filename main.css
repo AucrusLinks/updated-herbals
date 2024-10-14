@@ -1096,7 +1096,7 @@ button:hover, .item:hover {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /* Responsive columns */
     justify-items: center;  /* Center items horizontally */
     gap: 20px;  /* Add some spacing between items */
-    padding-left: 33px;
+    padding-left: 29px;
 }
 
 .item {
