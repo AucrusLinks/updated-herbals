@@ -1175,3 +1175,210 @@ button:hover, .item:hover {
     opacity: 0;
     animation-fill-mode: forwards;
 }
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to bottom, #1b1b1b, #000);
+    color: #fff;
+    padding: 60px 0 20px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgb(118, 178, 27), transparent);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+}
+
+.footer-section h4 {
+    color: rgb(118, 178, 27);
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgb(118, 178, 27), transparent);
+}
+
+.footer-section p {
+    color: #939393;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(118, 178, 27, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(118, 178, 27);
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: rgb(118, 178, 27);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.footer-section ul li {
+    margin-bottom: 15px;
+}
+
+.footer-section ul li a {
+    color: #939393;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding-left: 0;
+}
+
+.footer-section ul li a:hover {
+    color: rgb(118, 178, 27);
+    padding-left: 8px;
+}
+
+.footer-section ul li a.active {
+    color: rgb(118, 178, 27);
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #939393;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.footer-contact li i {
+    color: rgb(118, 178, 27);
+    font-size: 1.2rem;
+    background: rgba(118, 178, 27, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.footer-contact li:hover {
+    color: #fff;
+}
+
+.footer-contact li:hover i {
+    background: rgb(118, 178, 27);
+    color: white;
+}
+
+.footer-subscribe {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer-subscribe input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #333;
+    border-radius: 30px;
+    background: transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer-subscribe input:focus {
+    border-color: rgb(118, 178, 27);
+    outline: none;
+    background: rgba(118, 178, 27, 0.05);
+}
+
+.footer-subscribe button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgb(118, 178, 27);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-subscribe button:hover {
+    transform: translateX(3px);
+    background: #7ed957;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    color: #939393;
+    position: relative;
+}
+
+/* Mobile Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 0 20px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-contact li {
+        justify-content: center;
+    }
+
+    .footer-subscribe {
+        max-width: 300px;
+        margin: 15px auto 0;
+    }
+}
